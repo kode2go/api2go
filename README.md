@@ -17,7 +17,7 @@ HEAD	The HEAD method asks for a response identical to that of a GET request, but
 
 PATCH	It is used for modify capabilities. The PATCH request only needs to contain the changes to the resource, not the complete resource
 
-# Into To JSON
+# Intro To JSON
 
 JSON stands for JavaScript Object Notation
 
