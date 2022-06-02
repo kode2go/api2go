@@ -9,23 +9,27 @@ https://www.tutorialspoint.com/requests/requests_file_upload.htm
 
 
 '''
+import requests
 
-# Part 1
+getdata = requests.get('https://jsonplaceholder.typicode.com/users')
+print(getdata.status_code)
+print(getdata.content)
+print(getdata.cookies["__cfduid"])
 
-# Get
-payload = {'id': '9', 'username': 'Delphine'}
-res = requests.get('https://jsonplaceholder.typicode.com/users',params = payload)
-print(res)
+payload = {'id': 9, 'username': 'Delphine'}
+getdata = requests.get('https://jsonplaceholder.typicode.com/users', params = payload)
+print(getdata.content)
+print(getdata.url)
+print(getdata.encoding)
+print(getdata.json())
 
-# Post
-res = requests.post('https://jsonplaceholder.typicode.com/users', data = {'id':'9', 'username':'Delphine'})
-print(res)
+getdata = requests.get('https://jsonplaceholder.typicode.com/users', stream=True)
+print(getdata.raw)
+print(getdata.raw.read(50))
 
-# Put
-res = requests.put('https://jsonplaceholder.typicode.com/users', data =
-{'id':'9', 'username':'Delphine'})
-print(res)
+print(getdata.headers)
 
-# Delete
-res = requests.delete('https://jsonplaceholder.typicode.com/users')
-print(res)
+myurl = 'https://postman-echo.com/post'
+myparams = {'name': 'ABC', 'email':'xyz@gmail.com'}
+res = requests.post(myurl, data=myparams)
+print(res.text)
