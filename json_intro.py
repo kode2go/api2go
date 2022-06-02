@@ -1,31 +1,36 @@
 '''
 JSON Intro
 '''
-#!/usr/bin/env python3
 
-# Import json module
+# Convert from JSON to Python
+
 import json
-# https://linuxhint.com/search_json_python/
-# Define json data
-customerData ="""{
-    "id": "3425678",
-    "name": "John Micheal",
-    "email": "john@gmail.com",
-    "type": "regular",
-    "address": "4258 Poplar Chase Lane, Boise, Idaho."
-}"""
 
-# Input the key value that you want to search
-keyVal = "email"
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
 
-# load the json data
-customer = json.loads(customerData)
-# Search the key value using 'in' operator
-if keyVal in customer:
-    # Print the success message and the value of the key
-    print("%s is found in JSON data" %keyVal)
-    print("The value of", keyVal,"is", customer[keyVal])
-else:
-    # Print the message if the value does not exist
-    print("%s is not found in JSON data" %keyVal)
+# parse x:
+y = json.loads(x)
+
+# the result is a Python dictionary:
+print(y["age"]) 
+
+# Convert from Python to JSON
+
+import json
+
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+
+# convert into JSON:
+y = json.dumps(x)
+
+# the result is a JSON string:
+print(y) 
+
+
     
