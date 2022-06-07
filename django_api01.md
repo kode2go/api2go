@@ -8,6 +8,11 @@ $ curl -i -X POST -H 'Content-Type: application/json' -d '{"title": "N2", "body"
 $ curl -i -X GET http://127.0.0.1:8000/api/note/  
 ```
 
+## TastyPi Vs DJ Rest FW:
+https://stackoverflow.com/questions/7303313/what-are-the-differences-between-django-tastypie-and-djangorestframework
+
+## Resources:
+
 https://www.postman.com/popcornv/workspace/popcornv-s-public-workspace/request/create?requestId=29859d92-27da-4783-9cb2-124d27587d29
 
 
