@@ -25,3 +25,6 @@ JSON is a text format for storing and transporting data
 
 This example is a JSON string, It defines an object with 3 properties:
 
+# Parsing JSON Data:
+
+https://towardsdatascience.com/json-and-apis-with-python-fba329ef6ef0
